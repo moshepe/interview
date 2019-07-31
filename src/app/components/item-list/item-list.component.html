@@ -1,0 +1,8 @@
+<button (click)="onClick()">Get New Juke</button>
+<button (click)="onClearList()">Clear List</button>
+<ul *ngIf="items && items.length">
+    <li *ngFor="let juke of items"> 
+        <app-item-detail [juke]="juke" (removeItem)="onRemoveItem($event)"></app-item-detail>
+    </li>
+    
+</ul>

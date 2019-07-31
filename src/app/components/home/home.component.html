@@ -1,0 +1,7 @@
+<div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  </div>
+  
+  <app-item-list [items]="jukes$" (addItem)="addNewItem()" (clearItems)="onClearList()" (removeItem)="removeItem($event)"></app-item-list>
